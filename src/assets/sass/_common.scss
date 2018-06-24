@@ -1,0 +1,150 @@
+$theme-color: #3272b9;
+$theme-hover: #6d748a;
+$link: #007bff;
+$link-hover: #0056b3;
+$btn-pooldax: #3ab54a;
+$btn-pooldax-hover: #2fa53e;
+$btn-primary: #3272b9;
+$btn-primary-hover: #2968af;
+$table-border: #bfbfbf;
+$table-head: #e6e6e6;
+$tab-bg: #f7f7f7;
+$card: rgba(0,0,0,.125);
+$input-group-border: #ced4da;
+$input-focus: #6e6e6e;
+$white-light: #fafafa;
+$theme-border: #384952;
+$terms: #f9f9f9;
+$terms-border: rgba(0, 0, 0, 0.03);
+$disabled-bg: #dfdfdf;
+
+@mixin break-word() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+@mixin break-all() {
+    overflow-wrap: break-all;
+    word-wrap: break-all;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin border-radius($num) {
+    -webkit-border-radius: $num;
+    -moz-border-radius: $num;
+    border-radius: $num;
+}
+
+@mixin border-radius-custom($topLeft, $topRight, $bottomLeft, $bottomRight) {
+    -webkit-border-top-left-radius: $topLeft;
+    -webkit-border-top-right-radius: $topRight;
+    -webkit-border-bottom-left-radius: $bottomLeft;
+    -webkit-border-bottom-right-radius: $bottomRight;
+    -moz-border-radius-topleft: $topLeft;
+    -moz-border-radius-topright: $topRight;
+    -moz-border-radius-bottomleft: $bottomLeft;
+    -moz-border-radius-bottomright: $bottomRight;
+    border-top-left-radius: $topLeft;
+    border-top-right-radius: $topRight;
+    border-bottom-left-radius: $bottomLeft;
+    border-bottom-right-radius: $bottomRight;
+}
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin beemine-shadow() {
+    -webkit-box-shadow: 2px 3px 0px rgba(34, 45, 125, 0.1);
+    -moz-box-shadow: 2px 3px 0px rgba(34, 45, 125, 0.1);
+    box-shadow: 2px 3px 0px rgba(34, 45, 125, 0.1);
+}
+
+@mixin bg-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -ms-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+@mixin bg-image-custom($posalign, $posjust, $bgsize) {
+    background-repeat: no-repeat;
+    background-position: $posalign $posjust;
+    -webkit-background-size: $bgsize;
+    -moz-background-size: $bgsize;
+    -ms-background-size: $bgsize;
+    -o-background-size: $bgsize;
+    background-size: $bgsize;
+}
+
+@mixin no-appearance() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@mixin transition($prop:all, $time:0.3s, $style:ease-in) {
+    -webkit-transition: $prop $time $style;
+    -moz-transition: $prop $time $style;
+    -ms-transition: $prop $time $style;
+    -o-transition: $prop $time $style;
+    transition: $prop $time $style;
+}
+
+@mixin transform-matrix($a, $b, $c, $d, $e, $f) {
+    -webkit-transform: matrix($a, $b, $c, $d, $e, $f);
+    -moz-transform: matrix($a, $b, $c, $d, $e, $f);
+    -ms-transform: matrix($a, $b, $c, $d, $e, $f);
+    -o-transform: matrix($a, $b, $c, $d, $e, $f);
+    transform: matrix($a, $b, $c, $d, $e, $f);
+}
+
+@mixin transform-scale($value) {
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+
+@mixin transform-scaleX($value) {
+    -webkit-transform: scaleX($value);
+    -moz-transform: scaleX($value);
+    -ms-transform: scaleX($value);
+    -o-transform: scaleX($value);
+    transform: scaleX($value);
+}
+
+@mixin transform-rotate($value) {
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+    transform: rotate($value);
+}
+
+@mixin transform-translate3d($x, $y, $z) {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
