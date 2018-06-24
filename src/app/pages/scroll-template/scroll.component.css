@@ -1,0 +1,13 @@
+.content {
+    padding: 50px 25px;
+    background: grey;
+}
+#inner {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background: blue;
+}
+.none {
+    display: none;
+}
