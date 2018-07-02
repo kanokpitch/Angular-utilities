@@ -8,6 +8,7 @@ import { HttpModule, Http } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgPipesModule } from 'ngx-pipes';
+import { SlugifyPipe } from 'ngx-pipes';
 
 import { GoogleService } from './services/google.services';
 import { CommonService } from './services/common.service';
@@ -51,7 +52,7 @@ import { PipesComponent } from './pages/pipes/pipes.component';
     NgPipesModule,
     SharedModule
   ],
-  providers: [GoogleService, CommonService, UploadService],
+  providers: [SlugifyPipe, GoogleService, CommonService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
