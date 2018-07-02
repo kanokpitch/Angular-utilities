@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-sm-12">
+      <h2 class="text-center mb-4">Translator Project using Google API</h2>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <form #translator="ngForm" (ngSubmit)="send()">
+        <textarea name="spanish" placeholder="Text to translate to Spanish" matInput minlength="5" rows="10" required [(ngModel)]="customObj.q"></textarea>
+        <div class="d-flex justify-content-between">
+          <button type="button" mat-raised-button color="accent" (click)="customObj.q = ''; result = ''">Erase</button>
+          <button type="submit" id="btnSubmit" mat-raised-button color="primary" [disabled]="!translator.valid">Translate</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <label for="english" class="font-weight-bold">Result:</label>
+      <p>{{result}}</p>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule, Http } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NgPipesModule } from 'ngx-pipes';
 
+import { GoogleService } from './services/google.services';
 import { CommonService } from './services/common.service';
 import { UploadService } from './services/upload.service';
 
@@ -18,6 +20,9 @@ import { NotifyComponent } from './pages/notify-template/notify.component';
 import { SingleUploadComponent } from './pages/upload-template/single/single.component';
 import { MultipleUploadComponent } from './pages/upload-template/multiple/multiple.component';
 import { SharedModule } from './shared/shared.module';
+import { AutocompleteTemplateComponent } from './pages/autocomplete-template/autocomplete-template.component';
+import { TranslateComponent } from './pages/translate-template/translate.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,10 @@ import { SharedModule } from './shared/shared.module';
     IndexComponent,
     NotifyComponent,
     SingleUploadComponent,
-    MultipleUploadComponent
+    MultipleUploadComponent,
+    AutocompleteTemplateComponent,
+    TranslateComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +48,10 @@ import { SharedModule } from './shared/shared.module';
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    NgPipesModule,
     SharedModule
   ],
-  providers: [CommonService, UploadService],
+  providers: [GoogleService, CommonService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
