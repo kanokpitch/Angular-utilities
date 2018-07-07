@@ -17,7 +17,7 @@ export class SelectTemplateComponent implements OnInit {
     this.options = {
       templateResult: this.templateResult,
       templateSelection: this.templateSelection
-    }
+    };
   }
 
   // function for result template

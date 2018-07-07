@@ -12,7 +12,7 @@ export class SelectMatcherComponent implements OnInit {
   ngOnInit() {
     this.options = {
       matcher: (term: string, text: string) => {
-        return text.toUpperCase().indexOf(term.toUpperCase()) == 0;
+        return text.toUpperCase().indexOf(term.toUpperCase()) === 0;
       }
     };
 

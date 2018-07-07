@@ -33,6 +33,6 @@ export class SelectOptionsComponent implements OnInit {
       multiple: true,
       theme: 'classic',
       closeOnSelect: false
-    }
+    };
   }
 }
