@@ -6,11 +6,27 @@ import { SingleUploadComponent } from './app/pages/upload-template/single/single
 import { MultipleUploadComponent } from './app/pages/upload-template/multiple/multiple.component';
 import { TranslateComponent } from './app/pages/translate-template/translate.component';
 import { PipesComponent } from './app/pages/pipes/pipes.component';
+import { SelectComponent } from './app/pages/select-template/select.component';
+import { SelectBasicComponent } from './app/pages/select-template/basic/basic.component';
+import { SelectChangeComponent } from './app/pages/select-template/change/change.component';
+import { SelectDynamicComponent } from './app/pages/select-template/dynamic/dynamic.component';
+import { SelectMatcherComponent } from './app/pages/select-template/matcher/matcher.component';
+import { SelectMultipleComponent } from './app/pages/select-template/multiple/multiple.component';
+import { SelectOptionsComponent } from './app/pages/select-template/options/options.component';
+import { SelectTemplateComponent } from './app/pages/select-template/template/template.component';
 
 export const appRoutes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'scroll', component: ScrollComponent },
   { path: 'notify', component: NotifyComponent },
+  { path: 'select', component: SelectComponent },
+  { path: 'select-basic', component: SelectBasicComponent },
+  { path: 'select-change', component: SelectChangeComponent },
+  { path: 'select-dynamic', component: SelectDynamicComponent },
+  { path: 'select-matcher', component: SelectMatcherComponent },
+  { path: 'select-multiple', component: SelectMultipleComponent },
+  { path: 'select-options', component: SelectOptionsComponent },
+  { path: 'select-template', component: SelectTemplateComponent },
   { path: 'single-upload', component: SingleUploadComponent },
   { path: 'multiple-upload', component: MultipleUploadComponent },
   { path: 'pipe', component: PipesComponent },

@@ -9,10 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgPipesModule } from 'ngx-pipes';
 import { SlugifyPipe } from 'ngx-pipes';
+import { Select2Module } from 'ng2-select2';
 
 import { GoogleService } from './services/google.services';
 import { CommonService } from './services/common.service';
 import { UploadService } from './services/upload.service';
+import { DataService } from './services/data.service';
 
 import { AppComponent } from './app.component';
 import { ScrollComponent } from './pages/scroll-template/scroll.component';
@@ -24,6 +26,14 @@ import { SharedModule } from './shared/shared.module';
 import { AutocompleteTemplateComponent } from './pages/autocomplete-template/autocomplete-template.component';
 import { TranslateComponent } from './pages/translate-template/translate.component';
 import { PipesComponent } from './pages/pipes/pipes.component';
+import { SelectComponent } from './pages/select-template/select.component';
+import { SelectBasicComponent } from './pages/select-template/basic/basic.component';
+import { SelectChangeComponent } from './pages/select-template/change/change.component';
+import { SelectDynamicComponent } from './pages/select-template/dynamic/dynamic.component';
+import { SelectMatcherComponent } from './pages/select-template/matcher/matcher.component';
+import { SelectMultipleComponent } from './pages/select-template/multiple/multiple.component';
+import { SelectOptionsComponent } from './pages/select-template/options/options.component';
+import { SelectTemplateComponent } from './pages/select-template/template/template.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +45,15 @@ import { PipesComponent } from './pages/pipes/pipes.component';
     MultipleUploadComponent,
     AutocompleteTemplateComponent,
     TranslateComponent,
-    PipesComponent
+    PipesComponent,
+    SelectComponent,
+    SelectBasicComponent,
+    SelectChangeComponent,
+    SelectDynamicComponent,
+    SelectMatcherComponent,
+    SelectMultipleComponent,
+    SelectOptionsComponent,
+    SelectTemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -50,9 +68,10 @@ import { PipesComponent } from './pages/pipes/pipes.component';
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     NgPipesModule,
+    Select2Module,
     SharedModule
   ],
-  providers: [SlugifyPipe, GoogleService, CommonService, UploadService],
+  providers: [SlugifyPipe, GoogleService, CommonService, UploadService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
