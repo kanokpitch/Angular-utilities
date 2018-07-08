@@ -14,6 +14,9 @@ import { SelectMatcherComponent } from './app/pages/select-template/matcher/matc
 import { SelectMultipleComponent } from './app/pages/select-template/multiple/multiple.component';
 import { SelectOptionsComponent } from './app/pages/select-template/options/options.component';
 import { SelectTemplateComponent } from './app/pages/select-template/template/template.component';
+import { MaterialTemplateComponent } from './app/pages/material-template/material-template.component';
+import { ButtonComponent } from './app/pages/material-template/button/button.component';
+import { InputComponent } from './app/pages/material-template/input/input.component';
 
 export const appRoutes: Routes = [
   { path: '', component: IndexComponent },
@@ -29,6 +32,14 @@ export const appRoutes: Routes = [
   { path: 'select-template', component: SelectTemplateComponent },
   { path: 'single-upload', component: SingleUploadComponent },
   { path: 'multiple-upload', component: MultipleUploadComponent },
+  {
+    path: 'material',
+    children: [
+      { path: '', component: MaterialTemplateComponent },
+      { path: 'button', component: ButtonComponent },
+      { path: 'input', component: InputComponent }
+    ]
+  },
   { path: 'pipe', component: PipesComponent },
   { path: 'translate', component: TranslateComponent }
 ];

@@ -6,6 +6,7 @@ import { appRoutes } from '../routes';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule, Http } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material';
 import { ToastrModule } from 'ngx-toastr';
 import { NgPipesModule } from 'ngx-pipes';
 import { SlugifyPipe } from 'ngx-pipes';
@@ -34,6 +35,9 @@ import { SelectMatcherComponent } from './pages/select-template/matcher/matcher.
 import { SelectMultipleComponent } from './pages/select-template/multiple/multiple.component';
 import { SelectOptionsComponent } from './pages/select-template/options/options.component';
 import { SelectTemplateComponent } from './pages/select-template/template/template.component';
+import { MaterialTemplateComponent } from './pages/material-template/material-template.component';
+import { ButtonComponent } from './pages/material-template/button/button.component';
+import { InputComponent } from './pages/material-template/input/input.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,10 @@ import { SelectTemplateComponent } from './pages/select-template/template/templa
     SelectMatcherComponent,
     SelectMultipleComponent,
     SelectOptionsComponent,
-    SelectTemplateComponent
+    SelectTemplateComponent,
+    MaterialTemplateComponent,
+    ButtonComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -69,9 +76,16 @@ import { SelectTemplateComponent } from './pages/select-template/template/templa
     RouterModule.forRoot(appRoutes),
     NgPipesModule,
     Select2Module,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ],
-  providers: [SlugifyPipe, GoogleService, CommonService, UploadService, DataService],
+  providers: [
+    SlugifyPipe,
+    GoogleService,
+    CommonService,
+    UploadService,
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
