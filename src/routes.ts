@@ -22,14 +22,19 @@ export const appRoutes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'scroll', component: ScrollComponent },
   { path: 'notify', component: NotifyComponent },
-  { path: 'select', component: SelectComponent },
-  { path: 'select-basic', component: SelectBasicComponent },
-  { path: 'select-change', component: SelectChangeComponent },
-  { path: 'select-dynamic', component: SelectDynamicComponent },
-  { path: 'select-matcher', component: SelectMatcherComponent },
-  { path: 'select-multiple', component: SelectMultipleComponent },
-  { path: 'select-options', component: SelectOptionsComponent },
-  { path: 'select-template', component: SelectTemplateComponent },
+  {
+    path: 'select',
+    children: [
+      { path: '', component: SelectComponent },
+      { path: 'basic', component: SelectBasicComponent },
+      { path: 'change', component: SelectChangeComponent },
+      { path: 'dynamic', component: SelectDynamicComponent },
+      { path: 'matcher', component: SelectMatcherComponent },
+      { path: 'multiple', component: SelectMultipleComponent },
+      { path: 'options', component: SelectOptionsComponent },
+      { path: 'template', component: SelectTemplateComponent }
+    ]
+  },
   { path: 'single-upload', component: SingleUploadComponent },
   { path: 'multiple-upload', component: MultipleUploadComponent },
   {
