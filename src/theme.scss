@@ -1,13 +1,10 @@
-@import '~@angular/material/theming';
+// @import '~@angular/material/theming';
+@import 'theming';
 @include mat-core();
-$my-app-primary: mat-palette($mat-indigo, 700, 300, 900);
-$my-app-accent : mat-palette($mat-light-blue);
-$my-app-warn : mat-palette($mat-deep-orange, A200);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-@include angular-material-theme($my-app-theme);
-.alternate-theme {
-  $alternate-primary: mat-palette($mat-light-blue);
-  $alternate-accent: mat-palette($mat-yellow, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
+$pooldax-primary: mat-palette($mat-pooldax, 50);
+$pooldax-accent: mat-palette($mat-pooldax, 100);
+$pooldax-warn: mat-palette($mat-amber, 700);
+$pooldax-theme: mat-light-theme( $pooldax-primary, $pooldax-accent, $pooldax-warn);
+.pooldax-theme {
+  @include angular-material-theme($pooldax-theme);
 }
