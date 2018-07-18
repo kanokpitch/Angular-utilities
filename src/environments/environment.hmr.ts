@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   googleApiKey: 'AIzaSyAKCg1pHkFyMNARSx-ghVN-nVz4p5Yd6Tc',
-  hmr: false
+  hmr: true
 };
 
 /*
