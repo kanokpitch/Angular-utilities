@@ -38,6 +38,7 @@ import { SelectTemplateComponent } from './pages/select-template/template/templa
 import { MaterialTemplateComponent } from './pages/material-template/material-template.component';
 import { ButtonComponent } from './pages/material-template/button/button.component';
 import { InputComponent } from './pages/material-template/input/input.component';
+import { ThemeComponent } from './pages/material-template/theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { InputComponent } from './pages/material-template/input/input.component'
     SelectTemplateComponent,
     MaterialTemplateComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,

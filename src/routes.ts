@@ -17,6 +17,7 @@ import { SelectTemplateComponent } from './app/pages/select-template/template/te
 import { MaterialTemplateComponent } from './app/pages/material-template/material-template.component';
 import { ButtonComponent } from './app/pages/material-template/button/button.component';
 import { InputComponent } from './app/pages/material-template/input/input.component';
+import { ThemeComponent } from './app/pages/material-template/theme/theme.component';
 
 export const appRoutes: Routes = [
   { path: '', component: IndexComponent },
@@ -42,7 +43,8 @@ export const appRoutes: Routes = [
     children: [
       { path: '', component: MaterialTemplateComponent },
       { path: 'button', component: ButtonComponent },
-      { path: 'input', component: InputComponent }
+      { path: 'input', component: InputComponent },
+      { path: 'theme', component: ThemeComponent }
     ]
   },
   { path: 'pipe', component: PipesComponent },
