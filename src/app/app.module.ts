@@ -39,6 +39,8 @@ import { MaterialTemplateComponent } from './pages/material-template/material-te
 import { ButtonComponent } from './pages/material-template/button/button.component';
 import { InputComponent } from './pages/material-template/input/input.component';
 import { ThemeComponent } from './pages/material-template/theme/theme.component';
+import { StaticComponent } from './pages/nvs/static/static.component';
+import { DynamicComponent } from './pages/nvs/dynamic/dynamic.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { ThemeComponent } from './pages/material-template/theme/theme.component'
     MaterialTemplateComponent,
     ButtonComponent,
     InputComponent,
-    ThemeComponent
+    ThemeComponent,
+    StaticComponent,
+    DynamicComponent
   ],
   imports: [
     BrowserModule,

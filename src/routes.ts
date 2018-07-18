@@ -18,6 +18,8 @@ import { MaterialTemplateComponent } from './app/pages/material-template/materia
 import { ButtonComponent } from './app/pages/material-template/button/button.component';
 import { InputComponent } from './app/pages/material-template/input/input.component';
 import { ThemeComponent } from './app/pages/material-template/theme/theme.component';
+import { StaticComponent } from './app/pages/nvs/static/static.component';
+import { DynamicComponent } from './app/pages/nvs/dynamic/dynamic.component';
 
 export const appRoutes: Routes = [
   { path: '', component: IndexComponent },
@@ -34,6 +36,13 @@ export const appRoutes: Routes = [
       { path: 'multiple', component: SelectMultipleComponent },
       { path: 'options', component: SelectOptionsComponent },
       { path: 'template', component: SelectTemplateComponent }
+    ]
+  },
+  {
+    path: 'nvs',
+    children: [
+      { path: 'static', component: StaticComponent },
+      { path: 'dynamic', component: DynamicComponent }
     ]
   },
   { path: 'single-upload', component: SingleUploadComponent },
