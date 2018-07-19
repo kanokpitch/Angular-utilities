@@ -16,6 +16,7 @@ import { GoogleService } from './services/google.services';
 import { CommonService } from './services/common.service';
 import { UploadService } from './services/upload.service';
 import { DataService } from './services/data.service';
+import { PostService } from './services/post.service';
 
 import { AppComponent } from './app.component';
 import { ScrollComponent } from './pages/scroll-template/scroll.component';
@@ -90,7 +91,8 @@ import { DynamicComponent } from './pages/nvs/dynamic/dynamic.component';
     GoogleService,
     CommonService,
     UploadService,
-    DataService
+    DataService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })

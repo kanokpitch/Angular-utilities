@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   googleApiKey: 'AIzaSyAKCg1pHkFyMNARSx-ghVN-nVz4p5Yd6Tc',
+  ipHost: 'https://batman.skuberg.com',
   hmr: true
 };
 

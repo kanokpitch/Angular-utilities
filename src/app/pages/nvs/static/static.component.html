@@ -2,6 +2,30 @@
   <div class="row">
     <div class="col-lg-12">
       <h4>Static autocomplete</h4>
+      <div class="form-group nvs-form-group fx-2">
+        <input type="text" class="form-control nvs-input nvs-over" name="paymentMethod" id="payment_method_id" (input)="inputPayment()" (keydown)="onTabEnter($event, 'payment_method_id', 'nvsPaymentAutoComplete', nvsPaymentAutoList, 'name')" (click)="allPayment()" [(ngModel)]="paymentMethodText" autocomplete="off" />
+        <ul id="nvsPaymentAutoComplete" class="list-group nvs-auto-complete" [class.clicked]="nvsControls.payment" [style.width]="inputWidth.payment">
+          <li class="list-group-item group" *ngFor="let pmg of nvsPaymentAutoList">
+            <h6 class="font-weight-bold">{{ pmg.optgroup }}</h6>
+            <ul>
+              <li class="nvs-item" *ngFor="let pml of pmg.data" [class.nvs-active]="(pml.key == paymentMethod)" (click)="nvsPaymentClicked(pml.key)">{{ pml.name }}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="form-group nvs-form-group fx-1">
+        <input type="text" class="form-control nvs-input" id="trade_type" name="searchTypeText" [(ngModel)]="searchTypeText" (keydown)="onTabEnter($event, 'trade_type', 'nvsTradeAutoComplete', tradeList, 'key')" (click)="nvsCheckControls('trade')" readonly autocomplete="off" />
+        <ul id="nvsTradeAutoComplete" class="list-group nvs-auto-complete" [class.clicked]="nvsControls.trade" [style.width]="inputWidth.trade">
+          <li class="list-group-item single nvs-item" [class.nvs-active]="(tradeList.Buy.key == searchType)" (click)="nvsTradeClicked(tradeList.Buy.key)">{{ tradeList.Buy.trans }}</li>
+          <li class="list-group-item single nvs-item" [class.nvs-active]="(tradeList.Sell.key == searchType)" (click)="nvsTradeClicked(tradeList.Sell.key)">{{ tradeList.Sell.trans }}</li>
+        </ul>
+      </div>
+      <div class="form-group nvs-form-group fx-1">
+        <input type="text" class="form-control nvs-input" id="crypto_currency" name="cryptoSymbol" [(ngModel)]="cryptoText" (input)="inputCrypto()" (keydown)="onTabEnter($event, 'crypto_currency', 'nvsCryptoAutoComplete', nvsCryptoAutoList, 'symbol')" (click)="allCrypto()" autocomplete="off" />
+        <ul id="nvsCryptoAutoComplete" class="list-group nvs-auto-complete" [class.clicked]="nvsControls.crypto" [style.width]="inputWidth.crypto">
+          <li class="list-group-item single nvs-item" [class.nvs-active]="(cryp.id == cryptoId)" (click)="nvsCryptoClicked(cryp.symbol, cryp.id)" *ngFor="let cryp of nvsCryptoAutoList">{{ cryp.symbol }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
